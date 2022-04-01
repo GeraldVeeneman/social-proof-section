@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+}
