@@ -1,0 +1,141 @@
+/* Colours */
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Typography */
+h1 {
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3, h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+/* Fonts */
+/* Media Query break points */
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  font-family: "Spartan", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.top-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-gap: 30px;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.description__header {
+  color: var(--very-dark-magenta);
+}
+.description__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark-grayish-magenta);
+  line-height: 2.4rem;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.ratings .box {
+  background-color: var(--light-grayish-magenta);
+  border-radius: 5px;
+  padding: 15px;
+}
+.ratings__caption {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--very-dark-magenta);
+  line-height: 1.3rem;
+}
+.ratings__stars {
+  line-height: 3rem;
+}
+.ratings__stars img {
+  margin: 2px;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-gap: 30px;
+}
+.testimonials .testimonial {
+  border-radius: 10px;
+  padding: 3rem;
+  background-color: var(--very-dark-magenta);
+}
+.testimonials .testimonial__picture {
+  border-radius: 50%;
+  margin-right: 2rem;
+  width: 45px;
+  height: 45px;
+}
+.testimonials .testimonial__caption {
+  display: inline-block;
+  vertical-align: bottom;
+  height: 45px;
+}
+.testimonials .testimonial__caption--name {
+  color: var(--white);
+}
+.testimonials .testimonial__caption--role {
+  color: var(--soft-pink);
+}
+.testimonials .testimonial__quote {
+  margin: 3rem 0;
+  color: var(--light-grayish-magenta);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
