@@ -131,7 +131,7 @@ body {
   color: var(--soft-pink);
 }
 .testimonials .testimonial__quote {
-  margin: 3rem 0;
+  margin-top: 3rem;
   color: var(--light-grayish-magenta);
   font-size: 1.3rem;
   font-weight: 500;
