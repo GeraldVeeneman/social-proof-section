@@ -47,7 +47,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+  background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
   background-repeat: no-repeat;
   background-position: left top, right bottom;
   font-family: "Spartan", sans-serif;
@@ -56,7 +56,7 @@ body {
 }
 @media only screen and (min-width: 1085px) {
   body {
-    background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat;
     background-position: left top, right bottom;
   }
