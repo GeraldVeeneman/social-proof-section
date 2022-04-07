@@ -65,7 +65,7 @@ body {
   @media only screen and (min-width: $bp-desktop) {
     background: {
       image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
-      repeat: no-repeat;
+      repeat: no-repeat, no-repeat;
       position: left top, right bottom;
     }
   }
