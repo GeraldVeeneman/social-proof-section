@@ -49,15 +49,21 @@ body {
   height: 100vh;
   background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: left top, right bottom;
   font-family: "Spartan", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
 }
+@media only screen and (min-width: 1085px) {
+  body {
+    background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+  }
+}
 
 .container {
-  max-width: 1440px;
-  background-color: #f0f0f0;
+  max-width: 1190px;
   margin: 0 auto;
   padding: 2.5rem;
 }
@@ -65,19 +71,37 @@ body {
 .top-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 50px;
   margin: 50px 0;
   text-align: center;
 }
 
+@media only screen and (min-width: 1085px) {
+  .description {
+    text-align: left;
+    margin-right: 8rem;
+  }
+}
 .description__header {
   color: var(--very-dark-magenta);
+}
+@media only screen and (min-width: 1085px) {
+  .description__header {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
 }
 .description__text {
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--dark-grayish-magenta);
   line-height: 2.4rem;
+}
+@media only screen and (min-width: 1085px) {
+  .description__text {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
 }
 
 .ratings {
@@ -90,14 +114,42 @@ body {
   border-radius: 5px;
   padding: 15px;
 }
+@media only screen and (min-width: 1085px) {
+  .ratings .box {
+    padding: 20px 30px;
+    width: 445px;
+  }
+}
+@media only screen and (min-width: 1085px) {
+  .ratings .box--report-guru {
+    margin-left: 50px;
+  }
+}
+@media only screen and (min-width: 1085px) {
+  .ratings .box--besttech {
+    margin-left: 100px;
+  }
+}
 .ratings__caption {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--very-dark-magenta);
   line-height: 1.3rem;
 }
+@media only screen and (min-width: 1085px) {
+  .ratings__caption {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+  }
+}
 .ratings__stars {
   line-height: 3rem;
+}
+@media only screen and (min-width: 1085px) {
+  .ratings__stars {
+    display: flex;
+  }
 }
 .ratings__stars img {
   margin: 2px;
@@ -112,6 +164,11 @@ body {
   border-radius: 10px;
   padding: 3rem;
   background-color: var(--very-dark-magenta);
+}
+@media only screen and (min-width: 1085px) {
+  .testimonials .testimonial {
+    height: 230px;
+  }
 }
 .testimonials .testimonial__picture {
   border-radius: 50%;
@@ -136,6 +193,16 @@ body {
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 2.2rem;
+}
+@media only screen and (min-width: 1085px) {
+  .testimonials .testimonial--irene {
+    margin-top: 25px;
+  }
+}
+@media only screen and (min-width: 1085px) {
+  .testimonials .testimonial--anne {
+    margin-top: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

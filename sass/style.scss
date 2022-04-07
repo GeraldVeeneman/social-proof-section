@@ -34,7 +34,7 @@ h3, h4 {
 $font-primary: 'Spartan', sans-serif;
 
 /* Media Query break points */
-$bp-mobile-max: 700px; // max. pixels mobile view
+$bp-desktop: 1085px; // minimum pixels desktop view
 
 /* Global reset */
 * {
@@ -59,8 +59,17 @@ body {
   background: {
     image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
     repeat: no-repeat;
-    position: left top;
+    position: left top, right bottom;
   }
+
+  @media only screen and (min-width: $bp-desktop) {
+    background: {
+      image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+      repeat: no-repeat;
+      position: left top, right bottom;
+    }
+  }
+
   font: {
     family: $font-primary;
     size: 1.5rem;
@@ -69,8 +78,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
-  background-color: #f0f0f0;
+  max-width: 1190px;
   margin: 0 auto;
   padding: 2.5rem;
 }
@@ -78,16 +86,26 @@ body {
 .top-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 50px;
   margin: 50px 0;
   text-align: center;
 }
 
 .description {
+
+  @media only screen and (min-width: $bp-desktop) {
+    text-align: left;
+    margin-right: 8rem;
+  }
   
 
   &__header {
     color: var(--very-dark-magenta);
+
+    @media only screen and (min-width: $bp-desktop) {
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+    }
 
   }
 
@@ -99,6 +117,13 @@ body {
     color: var(--dark-grayish-magenta);
     line-height: 2.4rem;
 
+    @media only screen and (min-width: $bp-desktop) {
+      font: {
+        size: 1.5rem;
+        weight: 700;
+      };
+    }
+
   }
 
 }
@@ -106,14 +131,17 @@ body {
 .ratings {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  
- 
+  gap: 15px; 
 
   .box {
     background-color: var(--light-grayish-magenta);
     border-radius: 5px;
     padding: 15px;
+
+    @media only screen and (min-width: $bp-desktop) {
+      padding: 20px 30px;
+      width: 445px;
+    }
 
     &--review {
 
@@ -121,9 +149,17 @@ body {
     
     &--report-guru {
 
+      @media only screen and (min-width: $bp-desktop) {
+        margin-left: 50px;
+      }
+
     }
 
     &--besttech {
+
+      @media only screen and (min-width: $bp-desktop) {
+        margin-left: 100px;
+      }
 
     }
 
@@ -137,9 +173,21 @@ body {
     }
     color: var(--very-dark-magenta);
     line-height: 1.3rem;
+
+    @media only screen and (min-width: $bp-desktop){
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+      
+    }
   }
 
   &__stars {
+
+    @media only screen and (min-width: $bp-desktop) {
+      display: flex;
+    }
+
     img {
       margin: 2px;
     }
@@ -156,6 +204,10 @@ body {
     border-radius: 10px;
     padding: 3rem;
     background-color: var(--very-dark-magenta);
+    
+    @media only screen and (min-width: $bp-desktop) {
+      height: 230px;
+    }    
 
     &__picture {
       border-radius: 50%;
@@ -190,6 +242,26 @@ body {
       line-height: 2.2rem;
     }
 
+    &--colton {
+
+    }
+
+    &--irene {
+      @media only screen and (min-width: $bp-desktop) {
+        margin-top: 25px;
+      }
+
+    }
+
+    &--anne {
+      @media only screen and (min-width: $bp-desktop) {
+        margin-top: 50px;
+      }
+
+    }
+
   }
+
+  
 
 }
