@@ -85,10 +85,14 @@ body {
 
 .top-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(325px,100%), 1fr));
-  grid-gap: 50px;
-  margin: 50px 0;
+  grid-template-columns: repeat(auto-fit, minmax(min(32.5rem,100%), 1fr));
+  grid-gap: 5rem;
+  margin: 5rem 0;
   text-align: center;
+
+  @media only screen and (min-width: $bp-desktop) {
+    gap: 1rem;
+  }
 }
 
 .description {
@@ -131,35 +135,44 @@ body {
 .ratings {
   display: flex;
   flex-direction: column;
-  gap: 15px; 
+  grid-gap: 1.5rem;
+  
+  @media only screen and (min-width: $bp-desktop) {
+    align-items: flex-end;
+  }
 
   .box {
     background-color: var(--light-grayish-magenta);
     border-radius: 5px;
-    padding: 15px;
+    padding: 1.5rem;
 
     @media only screen and (min-width: $bp-desktop) {
-      padding: 20px 30px;
-      width: 445px;
+      padding: 2rem 3rem;
+      width: 44.5rem;
     }
 
-    // &--review {}
+    &--reviews {
+
+      @media only screen and (min-width: $bp-desktop) {
+        margin-right: 10rem;
+      }
+    }
     
     &--report-guru {
 
       @media only screen and (min-width: $bp-desktop) {
-        margin-left: 50px;
+        margin-right: 5rem;
       }
 
     }
 
-    &--besttech {
+    // &--besttech {
 
-      @media only screen and (min-width: $bp-desktop) {
-        margin-left: 100px;
-      }
+    //   @media only screen and (min-width: $bp-desktop) {
+        
+    //   }
 
-    }
+    // }
 
 
   }
@@ -195,8 +208,8 @@ body {
 
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(325px, 100%), 1fr));
-  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(32.5rem, 100%), 1fr));
+  grid-gap: 3rem;
 
   .testimonial {
     border-radius: 10px;
