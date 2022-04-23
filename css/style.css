@@ -70,7 +70,7 @@ body {
 
 .top-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(325px, 100%), 1fr));
   grid-gap: 50px;
   margin: 50px 0;
   text-align: center;
